@@ -4,6 +4,7 @@ import os
 import os.path as osp
 import warnings
 from argparse import ArgumentParser
+import json
 
 import cv2
 import mmcv
@@ -493,7 +494,7 @@ def main():
                              f'vis_{osp.basename(args.video_path)}'), fourcc,
                     fps, (img_vis.shape[1], img_vis.shape[0]))
             writer.write(img_vis)
-
+            
     if save_out_video:
         writer.release()
 
